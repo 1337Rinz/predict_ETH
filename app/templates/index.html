@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            width: 100%;
+            display: block;
+        
+            background-color: #141722;
+            padding: 0;
+        }
+
+        .container {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chart {
+            width: 45%;
+            height: 80%;
+            background-color:  #141722;;
+            border-radius: 20px;
+            margin-top: -40px; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-placeholder {
+            width: 100%;
+            height: 100%;
+            margin-top: -50px; 
+        }
+
+        #mediumwidgetembed {
+            width: 100%;
+            height: 100%;
+        }
+       
+        .fullpage  h2 {
+            text-align: center;
+            font-size: 32px;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: default;
+            text-decoration: none;
+            color: inherit;
+            pointer-events: none; 
+        }
+
+        .fullpage  p {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 16px;
+            /* Loại bỏ kiểu liên kết */
+            cursor: default;
+            text-decoration: none;
+            color: inherit;
+            pointer-events: none; /* Ngăn chặn các sự kiện chuột được kích hoạt trên phần tử */
+        }
+        .fullpage {
+            width: 1000px;
+            height: 32px;
+            padding-top: .05%;
+            margin: 5% 25% 0% 25%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: azure;
+    
+        }
+
+        .footer{
+            width: 1000px;
+            height: 32px;
+            margin: -5% 25% ; 
+            display: flex;
+            justify-content: center;
+
+            align-items:  ;
+            color:#B2B5BE ;
+    
+        }
+ 
+        
+    </style>
+</head>
+
+<body>
+    <div class="fullpage"> 
+        <h2>Dự Đoán Giá Token Trên Thị Trường Tiền Mã Hoá </h2><p>Bằng Deep Learning</p>
+        
+    </div>
+    <div class="tradingview-widget-container" style="width: 100%; height: 110px;  margin-top: -7%; margin-bottom: 2%">
+        <iframe scrolling="no" allowtransparency="true" frameborder="0"
+            src="https://www.tradingview-widget.com/embed-widget/tickers/?locale=en#%7B%22symbols%22%3A%5B%7B%22description%22%3A%22%22%2C%22proName%22%3A%22COINBASE%3ABTCUSD%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22COINBASE%3AETHUSD%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BINANCE%3AIOTAUSD%22%7D%5D%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Afalse%2C%22width%22%3A%22100%25%22%2C%22height%22%3A104%2C%22utm_source%22%3A%22ayidouble.github.io%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22tickers%22%2C%22page-uri%22%3A%22ayidouble.github.io%2FHTML-Crypto-Currency-Chart-Snippets%2FTicker%22%7D"
+            title="tickers TradingView widget" lang="en"
+            style="user-select: none; box-sizing: border-box; display: block; height: calc(100% - 32px); width: 100%;"></iframe>
+        <div class="tradingview-widget-copyright"><a
+                href="https://www.tradingview.com/?utm_source=ayidouble.github.io&amp;utm_medium=widget_new&amp;utm_campaign=tickers"
+                rel="noopener" target="_blank"></div>
+
+        <style>
+            .tradingview-widget-copyright {
+                font-size: 13px !important;
+                line-height: 32px !important;
+                text-align: center !important;
+                vertical-align: middle !important;
+                font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
+                color: #B2B5BE !important;
+            }
+
+            .tradingview-widget-copyright .blue-text {
+                color: #2962FF !important;
+            }
+
+            .tradingview-widget-copyright a {
+                text-decoration: none !important;
+                color: #B2B5BE !important;
+            }
+
+            .tradingview-widget-copyright a:visited {
+                color: #B2B5BE !important;
+            }
+
+            .tradingview-widget-copyright a:hover .blue-text {
+                color: #1E53E5 !important;
+            }
+
+            .tradingview-widget-copyright a:active .blue-text {
+                color: #1848CC !important;
+            }
+
+            .tradingview-widget-copyright a:visited .blue-text {
+                color: #2962FF !important;
+            }
+        </style>
+    
+    </div>
+    
+    <div class="container">
+        
+        <div class="chart">
+            <div class="chart-placeholder">
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
+                            rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                            {
+                                "symbols": [
+                                    [
+                                        "COINBASE:ETHUSD|1D"
+                                    ]
+                                ],
+                                    "chartOnly": false,
+                                        "width": 756,
+                                            "height": 800,
+                                                "locale": "en",
+                                                    "colorTheme": "dark",
+                                                        "autosize": false,
+                                                            "showVolume": true,
+                                                                "showMA": true,
+                                                                    "hideDateRanges": false,
+                                                                        "hideMarketStatus": false,
+                                                                            "hideSymbolLogo": false,
+                                                                                "scalePosition": "right",
+                                                                                    "scaleMode": "Normal",
+                                                                                        "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                                                                                            "fontSize": "10",
+                                                                                                "noTimeScale": false,
+                                                                                                    "valuesTracking": "1",
+                                                                                                        "changeMode": "price-and-percent",
+                                                                                                            "chartType": "area",
+                                                                                                                "maLineColor": "#2962FF",
+                                                                                                                    "maLineWidth": 1,
+                                                                                                                        "maLength": 9,
+                                                                                                                            "lineWidth": 2,
+                                                                                                                                "lineType": 0,
+                                                                                                                                    "dateRanges": [
+                                                                                                                                        "1d|1",
+                                                                                                                                        "1m|30",
+                                                                                                                                        "3m|60",
+                                                                                                                                        "12m|1D",
+                                                                                                                                        "60m|1W",
+                                                                                                                                        "all|1M"
+                                                                                                                                    ]
+                            }
+                        </script>
+                </div>
+                <!-- TradingView Widget END -->
+                <!-- TradingView Widget END -->
+                <!-- End of Widget TradingView -->
+            </div>
+        </div>
+      
+        <div class="chart">
+            <div class="chart-placeholder">
+                <canvas id="myChart" width="800" height="800"></canvas>
+                <script>
+                    // Dữ liệu
+                    const data = {
+                        'Date': ['2024-03-01', '2024-03-02', '2024-03-03', '2024-03-04', '2024-03-05', '2024-03-06', '2024-03-07', '2024-03-08', '2024-03-09', '2024-03-10', '2024-03-11', '2024-03-12', '2024-03-13'],
+                        'Open': [3341.965820, 3436.159180, 3422.875244, 3489.340088, 3631.928955, 3554.067871, 3818.311035, 3874.830811, 3892.119141, 3915.590576, 3895.60791015625, 3877.246337890625, 3860.19580078125],
+                        'Close': [3435.053955, 3422.049805, 3490.993652, 3630.433838, 3554.964600, 3819.226318, 3874.347656, 3892.061035, 3915.418945, 3881.193115, ],
+                        'Adj Close': [3435.053955, 3422.049805, 3490.993652, 3630.433838, 3554.964600, 3819.226318, 3874.347656, 3892.061035, 3915.418945, 3881.193115, 3895.60791015625, 3877.246337890625, 3860.19580078125],
+                        'Volume': [16880101987, 12024340617, 13643324467, 26772963830, 47706899137, 34938642613, 22457177587, 26135487051, 11926623780, 15783924355]
+                    };
+            
+                    const filteredData = data['Close'].filter(value => value >= 2500 && value <= 4000);
+            
+                    // Vẽ biểu đồ
+                    const ctx = document.getElementById('myChart').getContext('2d');
+                    const myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: data['Date'],
+                            datasets: [
+                                {
+                                    label: 'Predict',
+                                    data: data['Open'],
+                                    borderColor: 'green',
+                                    backgroundColor: 'green',
+                                    fill: false
+                                },
+                                {
+                                    label: 'Real Close',
+                                    data: data['Close'],
+                                    borderColor: 'blue',
+                                    backgroundColor: 'blue',
+                                    fill: false
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    min: 2500,
+                                    max: 4000
+                                }
+                            },
+                            plugins: {
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            var label = context.dataset.label || '';
+                                            if (label) {
+                                                label += ': ';
+                                            }
+                                            if (context.parsed.y !== null) {
+                                                label += new Intl.NumberFormat().format(context.parsed.y);
+                                            }
+                                            return label;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                </script>
+       
+            </div>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>Sinh Viên Nguyễn Thu Huyền - 20219135 Huyen.NT219135@sis.hust.edu.vn</p>
+        <p>Huyen.NT219135@sis.hust.edu.vn</p>
+    </div>
+</body>
+
+</html>
